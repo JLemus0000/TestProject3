@@ -9,13 +9,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button btnStart;
+    Button btnPause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnStart = (Button)findViewById(R.id.bntStart);
+        btnStart = (Button)findViewById(R.id.btnStart);
+        btnPause = (Button)findViewById(R.id.btnNew);
         setActions();
 
     }
@@ -25,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendSomething("Message");
+            }
+        });
+
+        btnPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendSomething("New Message");
             }
         });
     }
