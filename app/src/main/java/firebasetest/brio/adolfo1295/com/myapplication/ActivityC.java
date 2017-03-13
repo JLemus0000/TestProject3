@@ -3,6 +3,7 @@ package firebasetest.brio.adolfo1295.com.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by adolfo1295 on 13/03/17.
@@ -15,6 +16,10 @@ public class ActivityC extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Activity created on branch-c
+        methodOnC("Hi C");
 
+    }
+    private void methodOnC(String messageC){
+        Toast.makeText(getApplicationContext(), messageC, Toast.LENGTH_SHORT).show();
     }
 }
