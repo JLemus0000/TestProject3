@@ -16,13 +16,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnStart = (Button)findViewById(R.id.bntStart);
+        setActions();
 
+    }
+
+    private void setActions(){
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Message", Toast.LENGTH_SHORT).show();
+                sendSomething("Message");
             }
         });
+    }
 
+
+    private void sendSomething (String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 }
