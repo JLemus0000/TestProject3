@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnStart;
     Button btnPause;
+    Button btnBranchC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnStart = (Button)findViewById(R.id.btnStart);
         btnPause = (Button)findViewById(R.id.btnNew);
+        btnBranchC = (Button)findViewById(R.id.btnBranchC);
         setActions();
 
     }
@@ -34,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendSomething("New Message");
+                newMethod();
+            }
+        });
+
+        btnBranchC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 newMethod();
             }
         });
