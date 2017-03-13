@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendSomething("New Message");
+                newMethod();
             }
         });
     }
@@ -41,5 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendSomething (String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void newMethod(){
+        Toast.makeText(getApplicationContext(), "New Method", Toast.LENGTH_SHORT).show();
     }
 }
